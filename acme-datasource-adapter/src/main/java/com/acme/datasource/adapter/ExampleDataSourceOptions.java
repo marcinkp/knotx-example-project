@@ -6,8 +6,8 @@ import io.vertx.core.json.JsonObject;
 @DataObject(generateConverter = true, publicConverter = false)
 public class ExampleDataSourceOptions {
 
+  private JsonObject clientOptions;
   private String address;
-
   public ExampleDataSourceOptions(JsonObject config) {
     ExampleDataSourceOptionsConverter.fromJson(config, this);
   }
@@ -18,6 +18,14 @@ public class ExampleDataSourceOptions {
 
   public ExampleDataSourceOptions setAddress(String address) {
     this.address = address;
+    return this;
+  }
+  public JsonObject getClientOptions() {
+    return clientOptions;
+  }
+
+  public ExampleDataSourceOptions setClientOptions(JsonObject clientOptions) {
+    this.clientOptions = clientOptions;
     return this;
   }
 

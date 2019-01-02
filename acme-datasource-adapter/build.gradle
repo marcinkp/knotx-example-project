@@ -16,7 +16,7 @@ dependencies {
   compileOnly 'io.vertx:vertx-rx-java2'
   compileOnly 'io.vertx:vertx-codegen'
   compileOnly 'io.vertx:vertx-service-proxy'
-
+  compileOnly 'io.vertx:vertx-jdbc-client'
 
   testCompile 'junit:junit'
   testCompile 'org.powermock:powermock-api-mockito'
