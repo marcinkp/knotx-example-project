@@ -17,18 +17,23 @@ dependencies {
   compileOnly 'io.vertx:vertx-codegen'
   compileOnly 'io.vertx:vertx-service-proxy'
   compileOnly 'io.vertx:vertx-jdbc-client'
+  compileOnly "org.hsqldb:hsqldb:2.4.0"
 
-  testCompile 'junit:junit'
-  testCompile 'org.powermock:powermock-api-mockito'
-  testCompile 'org.powermock:powermock-module-junit4'
+  testCompile 'org.junit.jupiter:junit-jupiter-api'
+  testCompile 'org.junit.jupiter:junit-jupiter-engine'
+  testCompile 'org.junit.jupiter:junit-jupiter-params'
+  testCompile 'org.junit.jupiter:junit-jupiter-migrationsupport'
+  testCompile 'org.junit.vintage:junit-vintage-engine'
+  testCompile 'uk.co.datumedge:hamcrest-json'
   testCompile 'org.hamcrest:hamcrest-all'
-  testCompile 'org.mockito:mockito-all'
-  testCompile 'io.vertx:vertx-unit'
-  testCompile 'io.vertx:vertx-config'
-  testCompileOnly 'io.vertx:vertx-codegen'
+  testCompile 'com.github.tomakehurst:wiremock'
 
-  testCompile 'io.knotx:knotx-core::tests'
-  testCompile "io.knotx:knotx-mocks:$knotxVersion"
+  testCompileOnly 'io.vertx:vertx-codegen'
+  testCompile 'io.vertx:vertx-config'
+  testCompile 'io.vertx:vertx-junit5'
+  testCompile 'io.knotx:knotx-mocks'
+  testCompile 'io.knotx:knotx-junit5'
+  testCompile "org.hsqldb:hsqldb:2.4.0"
 }
 sourceSets {
   main {
