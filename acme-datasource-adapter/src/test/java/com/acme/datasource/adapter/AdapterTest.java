@@ -2,7 +2,6 @@ package com.acme.datasource.adapter;
 
 import static com.google.common.io.Resources.getResource;
 import static io.knotx.junit5.util.RequestUtil.subscribeToResult_shouldSucceed;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
