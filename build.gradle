@@ -37,7 +37,6 @@ ext {
 
 subprojects { subproject ->
   group 'io.knotx.acme'
-  apply from: "${rootProject.projectDir}/release.gradle"
 
   apply plugin: 'java'
   apply plugin: 'io.spring.dependency-management'
@@ -127,4 +126,6 @@ subprojects { subproject ->
         'vertx.logger-delegate-factory-class-name': 'io.vertx.core.logging.SLF4JLogDelegateFactory'
     ]
   }
+
+  apply from: "${rootProject.projectDir}/release.gradle"
 }
