@@ -36,7 +36,8 @@ ext {
 }
 
 subprojects { subproject ->
-  group = 'io.knotx.acme'
+  group 'io.knotx.acme'
+  apply from: "${rootProject.projectDir}/release.gradle"
 
   apply plugin: 'java'
   apply plugin: 'io.spring.dependency-management'
@@ -125,11 +126,5 @@ subprojects { subproject ->
     systemProperties = [
         'vertx.logger-delegate-factory-class-name': 'io.vertx.core.logging.SLF4JLogDelegateFactory'
     ]
-  }
-
-
-  def nonReleasableModules = ['knotx-databridge-it-test', 'adapter-starterkit']
-  if (!nonReleasableModules.contains(subproject.name)) {
-    apply from: "${rootProject.projectDir}/release.gradle"
   }
 }
